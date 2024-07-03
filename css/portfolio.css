@@ -116,6 +116,53 @@ nav {
   opacity: 1;
 }
 
+/* LANDING SECTION STYLE */
+#landing {
+  height: 100vh;
+}
+
+#landing img {
+  height: 125px;
+}
+
+.landing-core {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  gap: 18px;
+}
+
+.landing-core h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: calc(40px + 3vw);
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #1a2236;
+}
+
+.landing-core p {
+  font-weight: 400;
+  font-size: calc(14px + 1vw);
+  color: #1a2236;
+  line-height: 25px;
+}
+
+.dark-button {
+  min-width: 100%;
+  color: #fff;
+  background-color: #1a2236;
+  text-align: center;
+  text-decoration: none;
+  padding: 9px 0;
+  border: 1px solid #1a2236;
+}
+
+.dark-button:hover {
+  color: #1a2236;
+  background-color: #fff;
+}
+
 #landing-img {
   width: 100%;
   min-height: 160px;
