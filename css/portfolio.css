@@ -185,12 +185,12 @@ nav {
 
   #navbar::before {
     opacity: 0;
-    min-height: 0px;
+    min-height: 0;
   }
 
   #navbar::after {
     opacity: 0;
-    height: 0px;
+    height: 0;
   }
 
   /* LANDING SECTION STYLE  */
@@ -204,7 +204,7 @@ nav {
     width: 50%;
     align-items: flex-start;
     align-self: center;
-    padding: 0; 
+    padding: 0;
     margin-left: 5%;
   }
 
@@ -215,7 +215,8 @@ nav {
     line-height: 25px;
   }
 
-  #landing-img-top, #landing-img {
+  #landing-img-top,
+  #landing-img {
     display: none;
   }
 
