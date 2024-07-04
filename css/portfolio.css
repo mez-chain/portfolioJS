@@ -171,6 +171,81 @@ nav {
   display: none;
 }
 
+/* PORTFOLIO SECTION */
+#portfolio {
+  padding-top: 50px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: calc(40px + 3vw);
+  line-height: calc(45px + 3vw);
+  text-transform: capitalize;
+  color: #1a2236;
+  margin: 0 0 40px 20px;
+}
+
+.project-card {
+  margin: 0 auto;
+}
+.card-head {
+  padding: 0;
+}
+
+.img-card {
+  max-width: 100%;
+}
+.card-body {
+  background-color: #1a2236;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin-top: -8px;
+}
+
+.card-title {
+  color: #fff;
+  font-weight: 300;
+}
+
+.tech-list {
+  list-style: none;
+}
+
+.list-item {
+  display: inline-block;
+  margin-right: 20px;
+  background-color: #98dede;
+  padding: 3px 10px;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px;
+  align-self: flex-start;
+  font-size: 18px;
+}
+
+.link:hover {
+  color: #1a2236;
+  background-color: #fff;
+}
+
+.fa-solid {
+  padding-left: 10px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
 @media (min-width: 768px) {
   .toggle-button {
     display: none;

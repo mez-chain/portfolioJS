@@ -1,7 +1,7 @@
 const dataProjects = [
     { name: 'Project name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi', featuredImage: '/images/portfolio/project1.png', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkToLiveVersion: 'link1', linkToSource: 'link2'},
     { name: 'Project name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi', featuredImage: '/images/portfolio/project2.png', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkToLiveVersion: 'link1', linkToSource: 'link2'},
-    { name: 'Project name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi', featuredImage: '/images/portfolio/project3.png', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkToLiveVersion: 'link1', linkToSource: 'link2'},
+    { name: 'Project name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi', featuredImage: '/images/portfolio/project6.png', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkToLiveVersion: 'link1', linkToSource: 'link2'},
     { name: 'Project name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi', featuredImage: '/images/portfolio/project4.png', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkToLiveVersion: 'link1', linkToSource: 'link2'},
     { name: 'Project name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi', featuredImage: '/images/portfolio/project5.png', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkToLiveVersion: 'link1', linkToSource: 'link2'},
     { name: 'Project name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi', featuredImage: '/images/portfolio/project6.png', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkToLiveVersion: 'link1', linkToSource: 'link2'},
@@ -9,7 +9,15 @@ const dataProjects = [
 
 document.addEventListener("DOMContentLoaded", () => {
     const contentSection = document.getElementById('portfolio');
+    const container = document.createElement('div');
+    container.className = 'container';
 
+    const portfolioHeader = document.createElement('h1');
+    portfolioHeader.textContent = 'Projects';
+    portfolioHeader.className = 'header';
+
+    container.appendChild(portfolioHeader);
+    
     dataProjects.forEach(project => {
         const divProject = document.createElement('div');
         divProject.className = 'project-card';
@@ -33,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         project.technologies.forEach(listItem => {
             const li = document.createElement('li');
             li.textContent = listItem;
+            li.className = 'list-item';
             techList.appendChild(li);
         });
 
@@ -41,12 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
         projectLink.href = '#';
         projectLink.className = 'link';
 
+        const icon = document.createElement('i');
+        icon.className = 'fa-solid fa-arrow-right';
+        projectLink.appendChild(icon);
+
         headDiv.appendChild(imgCard);
         divProject.appendChild(headDiv);
         bodyDiv.appendChild(title);
         bodyDiv.appendChild(techList);
         bodyDiv.appendChild(projectLink);
         divProject.appendChild(bodyDiv);
-        contentSection.appendChild(divProject);
+        container.appendChild(divProject);
     });
+
+    contentSection.appendChild(container);
 });
