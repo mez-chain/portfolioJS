@@ -171,6 +171,162 @@ nav {
   display: none;
 }
 
+/* PORTFOLIO SECTION */
+#portfolio {
+  padding-top: 50px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: calc(40px + 3vw);
+  line-height: calc(45px + 3vw);
+  text-transform: capitalize;
+  color: #1a2236;
+  margin: 0 0 40px 20px;
+}
+
+.project-card {
+  margin: 0 auto;
+}
+
+.card-head {
+  padding: 0;
+}
+
+.img-card {
+  max-width: 100%;
+}
+
+.card-body {
+  background-color: #1a2236;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin-top: -8px;
+}
+
+.card-title {
+  color: #fff;
+  font-weight: 300;
+}
+
+.tech-list {
+  list-style: none;
+}
+
+.list-item {
+  display: inline-block;
+  margin-right: 20px;
+  background-color: #98dede;
+  padding: 3px 10px;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px;
+  align-self: flex-start;
+  font-size: 18px;
+}
+
+.link:hover {
+  color: #1a2236;
+  background-color: #fff;
+}
+
+.fa-solid {
+  padding-left: 10px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  overflow: auto;
+}
+
+.popup-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1000px;
+  width: 90%;
+  margin: auto auto;
+  max-height: 95%;
+  overflow-y: auto;
+
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+#popupTitle {
+  font-size: calc(16px + 2vw);
+  margin-bottom: 15px;
+}
+
+#popupTechnologies {
+  margin-bottom: 20px;
+}
+
+#popupTechnologies li {
+  background-color: #fff;
+  border: 1px solid #1a2236;
+  padding: 0 10px;
+  margin-right: 10px;
+  font-size: calc(5px + 2vw);
+}
+
+#popupDescription {
+  margin: 20px 0;
+}
+
+#liveVersionLink,
+#sourceLink {
+  color: #1a2236;
+  background-color: #fff;
+  border: 1px solid #1a2236;
+  padding: 10px 20px;
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+#liveVersionLink:hover,
+#sourceLink:hover {
+  background-color: #1a2236;
+  color: #fff;
+}
+
 @media (min-width: 768px) {
   .toggle-button {
     display: none;
